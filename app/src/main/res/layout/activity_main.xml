@@ -1,0 +1,144 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+<LinearLayout
+    android:layout_gravity="center"
+    android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+
+    <Button
+        android:text="选择设备"
+        android:id="@+id/devChose_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:text="未获取地址"
+        android:id="@+id/macAddr_textview"
+        android:layout_marginLeft="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+    <Switch
+        android:layout_marginLeft="20dp"
+        android:id="@+id/connect_switch"
+        android:textOn="断开"
+        android:textOff="连接"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:text="未连接"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/btStatus_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:layout_marginLeft="10dp"
+        android:id="@+id/cal_btuuon"
+        android:text="水平校正"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Switch
+        android:textOn="解锁"
+        android:textOff="解除"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="点击解锁"
+        android:id="@+id/PWON_switch" />
+
+</LinearLayout>
+
+    <LinearLayout
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+
+
+            android:text="gas: 2048"
+            android:id="@+id/gas_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:text="yaw: 2048"
+            android:id="@+id/yaw_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:text="roll: 2048"
+            android:id="@+id/roll_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:text="pitch: 2048"
+            android:id="@+id/pitch_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent">
+
+            <com.gaojun4ever.joystick.RockerLeft
+                android:id="@+id/left_rudder"
+                android:layout_width="220dp"
+                android:layout_height="220dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="60dp" />
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent">
+
+            <com.gaojun4ever.joystick.RockerRight
+                android:layout_marginLeft="100dp"
+                android:layout_marginTop="60dp"
+                android:id="@+id/right_rudder"
+                android:layout_width="220dp"
+                android:layout_height="220dp" />
+        </LinearLayout>
+
+
+
+
+
+    </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</LinearLayout>
