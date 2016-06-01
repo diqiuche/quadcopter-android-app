@@ -11,7 +11,7 @@
     android:layout_height="wrap_content">
 
     <Button
-        android:text="选择设备"
+        android:text="搜索设备"
         android:id="@+id/devChose_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
@@ -106,9 +106,23 @@
                 android:layout_marginTop="60dp" />
         </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent">
 
+            <ScrollView
+                android:id="@+id/scrollView"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent">
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" />
+
+            </ScrollView>
+        </LinearLayout>
 
         <LinearLayout
+
             android:layout_width="wrap_content"
             android:layout_height="fill_parent">
 

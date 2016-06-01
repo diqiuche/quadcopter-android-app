@@ -188,6 +188,9 @@ public class MainActivity extends AppCompatActivity {
                     String bs005_ctrl_command=ProtocalUtils.adding_protocal("CAL");
                     mBluetoothLeService.WriteValue(bs005_ctrl_command);
                     Log.e(TAG, "cmd: " + bs005_ctrl_command);
+                }else{
+
+
                 }
             }
         });
@@ -195,18 +198,24 @@ public class MainActivity extends AppCompatActivity {
         PWON_switch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if(isChecked){
-                    String bs005_ctrl_command=ProtocalUtils.adding_protocal("PWON");
-                    mBluetoothLeService.WriteValue(bs005_ctrl_command);
-                    isArmed=true;
-                    mThread.start();
-                    Log.e(TAG, "cmd: " + bs005_ctrl_command);
+
+                if(mConnected){
+                    if(isChecked){
+                        String bs005_ctrl_command=ProtocalUtils.adding_protocal("PWON");
+                        mBluetoothLeService.WriteValue(bs005_ctrl_command);
+                        isArmed=true;
+                        mThread.start();
+                        Log.e(TAG, "cmd: " + bs005_ctrl_command);
+                    }else{
+                        String bs005_ctrl_command=ProtocalUtils.adding_protocal("PWOF");
+                        mBluetoothLeService.WriteValue(bs005_ctrl_command);
+                        isArmed=false;
+                        Log.e(TAG, "cmd: " + bs005_ctrl_command);
+                    }
                 }else{
-                    String bs005_ctrl_command=ProtocalUtils.adding_protocal("PWOF");
-                    mBluetoothLeService.WriteValue(bs005_ctrl_command);
-                    isArmed=false;
-                    Log.e(TAG, "cmd: " + bs005_ctrl_command);
+                    Toast.makeText(getApplicationContext(), "连接未成功请重新连接", Toast.LENGTH_SHORT).show();
                 }
+
             }
         });
 
